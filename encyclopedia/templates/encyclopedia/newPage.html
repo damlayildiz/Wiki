@@ -1,0 +1,34 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>New Entry</h1>
+    <hr>
+    <form class="newPage" action="{% url 'newPage' %}" method="POST">
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+        {% csrf_token %}
+        Title
+        <br><br>
+        {{ newPageForm.title }}
+        <br><br>
+        Content
+        <br>
+        {{ newPageForm.text}}
+        <br><br>
+        <input style=margin-left:1175px type="submit" name="submit" value="Submit Entry">
+    </form>
+
+{% endblock %}
