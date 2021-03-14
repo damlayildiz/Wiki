@@ -5,10 +5,11 @@ This  is a simple Wikipedia like encyclopedia website which allows users to sear
 ## Features 
 
 - Visiting **/wiki/TITLE**, where **TITLE** is the title of an encyclopedia entry, renders a page that displays the contents of that encyclopedia entry. If the entry requested does not exist, user is presented with an Page Not Found error. 
+
 - **Search box** where user can write the query they are looking for. And if no such query exists they are represented with a list of other entries that include the query as a substring in their name.
-- **Create New Page** where users can create their own entries with a title and a content using Markdown.
+- **Create New Page** where users can create their own entries using Markdown.
 - **Edit Page** where users are presented with the existing Markdown content which they can edit and save.  
-- **Random Page** takes user to a random encyclopedia entry.
+- **Random Page** takes the user to a random encyclopedia entry.
 
 ## Screenshots and Demo
   
